@@ -1,1 +1,1 @@
-# cedric-eady-jupiter
+Cedric Eady
