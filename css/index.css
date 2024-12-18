@@ -1,0 +1,52 @@
+/* coloring */
+body {
+    background-color: lightblue;
+    color: darkgreen;
+}
+
+/* google font */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* margins */
+p {
+    margin: 25px;
+}
+
+/* font size and weight */
+body {
+    font-size: 16px;
+}
+h2 {
+    font-size: 120%;
+    font-weight: 400;
+    color:black
+}
+h1 {
+    font-size: 32px;
+    font-style: italic;
+    text-align: left;
+}
+
+/* experience list */
+#experience ul {
+    list-style: square;
+}
+
+/* connect list */
+.my-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.linkedin-icon {
+    font-size: 30px;
+    color: mediumblue; 
+}
+.github-icon {
+    font-size: 30px;
+    color: black; 
+    text-decoration: none;
+}
