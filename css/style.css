@@ -1,34 +1,31 @@
-/* coloring */
+/* color and font */
 body {
     background-color: whitesmoke;
     color: green;
-}
-
-/* google font */
-body {
-    font-family: 'DM Sans', sans-serif;
-}
-
-/* margins */
-p {
-    margin: 20px;
-}
-
-/* font size and weight */
-body {
     font-size: 15px;
-}
-
-h2 {
-    font-size: 120%;
-    font-weight: 400;
-    color:black
+    /* google font */
+    font-family: 'DM Sans', sans-serif;
 }
 
 h1 {
     font-size: 32px;
-    font-style: italic;
+    font-style: bold;
     text-align: center;
+}
+
+h2 {
+    font-size: 150%;
+    font-weight: 600;
+    color: black;
+    margin: 5% 0;
+}
+
+p {
+    margin: 20px;
+}
+
+.footer {
+    font-size:80%
 }
 
 /* experience list */
@@ -39,7 +36,7 @@ h1 {
 /* connect list */
 #connect {
     text-align: center;
-    margin: 20px 0; 
+    margin: 5% 0; 
     padding: 10px;
 }
 
@@ -88,10 +85,10 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0; 
-    padding: 0; 
+    margin: auto; 
+    padding: auto; 
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
 nav ul li {
@@ -114,8 +111,8 @@ nav ul li a:hover {
 
 /* experience section */
 #experience {
-    margin: 20px 0;
-    padding: 10px;
+    margin: auto;
+    padding: 10px 0;
 }
 
 #experience .job {
@@ -146,4 +143,48 @@ nav ul li a:hover {
     font-size: 1em;
     color: #333;
     line-height: 1.5;
+}
+
+/* tablet media query */
+@media  (min-width:961px)  {
+    body {
+        font-size: 18px; /* increase font size for better readability */
+        margin: 0 10%; /* adjust margin for better layout */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* increase padding for easier touch interaction */
+        font-size: 1em; /* adjust font size for better visibility */
+    }
+
+    #connect .my-icons a {
+        font-size: 2.5em; /* increase icon size for better accessibility */
+        gap: 30px; /* increase gap between icons */
+    }
+}
+
+/* phone media query */
+@media (max-width:400px) {
+    h1{
+        font-size: 24px; /* reduce font size to fit smaller screens */
+        text-align: left; /* align text to the left for better layout */ 
+    }
+
+    h2 {
+        font-size: 120%; /* decrease font size for better readability */
+    }
+
+    body {
+        font-size: smaller; /* decrease font size for better readability */
+
+    }
+    nav ul {
+        flex-direction: column; /* stack navigation links vertically */
+        gap: 10px; /* reduce gap for compact layout */
+    }
+
+    .job-description {
+        font-size: 1em; /* decrease font size for space management */
+        margin-top: 10px; /* adjust margin for better spacing */
+    }
 }
