@@ -1,4 +1,4 @@
-/* color and font */
+/* main css edits */
 body {
     background-color: whitesmoke;
     color: green;
@@ -24,8 +24,9 @@ p {
     margin: 20px;
 }
 
-.footer {
-    font-size:80%
+footer {
+    font-size:80%;
+    text-align: center;
 }
 
 /* experience list */
@@ -145,46 +146,57 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
+/* desktop-first approach (phones and tablet media queries) */
 /* tablet media query */
 @media  (min-width:961px)  {
     body {
-        font-size: 18px; /* increase font size for better readability */
-        margin: 0 10%; /* adjust margin for better layout */
+        font-size: 18px; /* changed font size for better readability */
+        margin: 0 10%; /* adjusted margins for better layout */
     }
 
     nav ul li a {
-        padding: 10px 15px; /* increase padding for easier touch interaction */
-        font-size: 1em; /* adjust font size for better visibility */
+        padding: 10px 15px; /* increased padding for easier touch interaction */
+        font-size: 0.9em; /* adjusted font size for better visibility */
     }
 
     #connect .my-icons a {
-        font-size: 2.5em; /* increase icon size for better accessibility */
-        gap: 30px; /* increase gap between icons */
+        font-size: 2.5em; /* increased icon size for better accessibility */
+        gap: 30px; /* increased gap between icons */
     }
 }
 
 /* phone media query */
 @media (max-width:400px) {
     h1{
-        font-size: 24px; /* reduce font size to fit smaller screens */
-        text-align: left; /* align text to the left for better layout */ 
+        font-size: 24px; /* reduced font size to fit smaller screens */
+        text-align: left; /* aligned text to the left for better layout */ 
     }
 
-    h2 {
-        font-size: 120%; /* decrease font size for better readability */
-    }
-
-    body {
-        font-size: smaller; /* decrease font size for better readability */
-
-    }
     nav ul {
-        flex-direction: column; /* stack navigation links vertically */
-        gap: 10px; /* reduce gap for compact layout */
+        flex-direction: column; /* stacked navigation links vertically */
+        gap: 10px; /* reduced gap for compact layout */
     }
 
     .job-description {
-        font-size: 1em; /* decrease font size for space management */
-        margin-top: 10px; /* adjust margin for better spacing */
+        font-size: 1em; /* decreased font size for space management */
+        margin-top: 10px; /* adjusted margin for better spacing */
     }
+}
+
+/* skills section */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/* projects section */
+#projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0;
+    list-style: none;
 }
