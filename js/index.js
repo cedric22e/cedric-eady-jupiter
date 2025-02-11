@@ -68,4 +68,24 @@ messageForm.addEventListener('submit', function(event) {
     event.target.reset(); // clear the form
 });
 
+// fetch API 
+fetch("https://api.github.com/users/cedric22e/repos")
+  .then(response => response.json())
+  .then(repositories => {
+    // DOM Selection for projects section
+    const projectSection = document.querySelector('#projects');
+    
+    // create a <ul> element and append it to the project section 
+    const projectList = document.createElement('ul');
+    projectSection.appendChild(projectList);
+
+    // loop through repositories and create list items
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      project.textContent = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch(error => console.error('Error fetching repositories:', error));
+  
  
