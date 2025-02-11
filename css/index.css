@@ -1,0 +1,267 @@
+/* main css edits */
+body {
+    background-color: whitesmoke;
+    color: green;
+    font-size: 15px;
+    /* google font */
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-style: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 150%;
+    font-weight: 600;
+    color: black;
+    margin: 5% 0;
+}
+
+p {
+    margin: 20px;
+}
+
+footer {
+    font-size:80%;
+    text-align: center;
+}
+
+/* experience list */
+#experience ul {
+    list-style: square;
+}
+
+/* connect list */
+#connect {
+    text-align: center;
+    margin: 5% 0; 
+    padding: 10px;
+}
+
+#connect h2 {
+    font-size: 1.5em; 
+    margin-bottom: 15px;
+}
+
+#connect .my-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+#connect .my-icons a {
+    text-decoration: none; 
+    color: #333;
+    font-size: 2em;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+#connect .my-icons a:hover {
+    transform: scale(1.2); 
+    color: #4b7c96;
+}
+
+#connect .linkedin-icon:hover {
+    color: #0077b5; 
+}
+
+#connect .github-icon:hover {
+    color: #333; 
+}
+
+/* navigation section */
+nav {
+    position: sticky; 
+    top: 0; 
+    background-color: #fff; 
+    z-index: 1000;
+    padding: 10px;
+    display: flex; 
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    margin: auto; 
+    padding: auto; 
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline; 
+}
+
+nav ul li a {
+    text-decoration: none; /* remove underline */
+    color: #333; 
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0; 
+    color: #000;
+}
+
+/* experience section */
+#experience {
+    margin: auto;
+    padding: 10px 0;
+}
+
+#experience .job {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd; 
+    padding: 10px 0;
+}
+
+#experience .job-header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+
+#experience .job-title {
+    font-weight: bold;
+    font-size: 1.2em; 
+}
+
+#experience .job-dates {
+    font-size: 0.9em; 
+    color: #666; 
+}
+
+#experience .job-description {
+    margin-top: 5px; 
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* desktop-first approach (phones and tablet media queries) */
+/* tablet media query */
+@media  (min-width:961px)  {
+    body {
+        font-size: 18px; /* changed font size for better readability */
+        margin: 0 10%; /* adjusted margins for better layout */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* increased padding for easier touch interaction */
+        font-size: 0.9em; /* adjusted font size for better visibility */
+    }
+
+    #connect .my-icons a {
+        font-size: 2.5em; /* increased icon size for better accessibility */
+        gap: 30px; /* increased gap between icons */
+    }
+    #leave_message textarea {
+        font-size: 0.6em; /* increased font size for better readability */
+    }
+}
+   
+/* phone media query */
+@media (max-width:400px) {
+    h1{
+        font-size: 24px; /* reduced font size to fit smaller screens */
+        text-align: left; /* aligned text to the left for better layout */ 
+    }
+
+    nav ul {
+        flex-direction: column; /* stacked navigation links vertically */
+        gap: 10px; /* reduced gap for compact layout */
+    }
+
+    .job-description {
+        font-size: 1em; /* decreased font size for space management */
+        margin-top: 10px; /* adjusted margin for better spacing */
+    }
+}
+
+
+/* skills section */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/* projects section */
+#projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/* leave a message section */
+#leave_message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* style form fields */
+#leave_message input,
+#leave_message textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #3f3f3f;
+    border-radius: 5px;
+    font-size: 0.6em;
+}
+
+#leave_message input:focus,
+#leave_message textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+#leave_message button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#leave_message button:hover {
+    background-color: #0056b3;
+}
+
+/* messages section */
+#messages {
+    text-align: center; /* Center the heading */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#messages ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
